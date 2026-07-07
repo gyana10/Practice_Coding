@@ -906,3 +906,13 @@ def reverse_number(n):
         rev = rev * 10 + digit
         n //= 10
     return rev
+def beautiful_days(i, j, k):
+    count = 0
+    for num in range(i, j + 1):
+        rev = reverse_number(num)
+        diff = num - rev
+        if diff < 0:
+            diff = -diff
+        if diff % k == 0:
+            count += 1
+    return count
