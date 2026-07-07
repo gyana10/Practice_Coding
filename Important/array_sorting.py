@@ -916,3 +916,5 @@ def beautiful_days(i, j, k):
         if diff % k == 0:
             count += 1
     return count
+i, j, k = map(int, input().split())
+print(beautiful_days(i, j, k))
